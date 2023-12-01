@@ -1,0 +1,23 @@
+h2 {
+    color: gray;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+p {
+    color: black;
+    font-size: 14px;
+    font-family:'Courier New', Courier, monospace;
+    letter-spacing: 1px;
+}
+
+b {
+    color: black;
+    font-size: 14px;
+}
+
+a {
+    color:darkgrey;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
