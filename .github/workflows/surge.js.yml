@@ -21,10 +21,7 @@ jobs:
       # Install dependencies
       - name: Install dependencies
         run: npm install
+        
       # Build the project
-      - name: Build
-        run: npm run build
-  
-      # Deploy to surge
       - name: Deploy
-        run: npm install --global surge && surge ./build meuportolio.surge.sh --token de56c2607cb7a4125de8d88064c63745
+        run: npm install --global surge && surge --domain meuportolio.surge.sh --token de56c2607cb7a4125de8d88064c63745
