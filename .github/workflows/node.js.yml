@@ -9,20 +9,21 @@ on:
       - master # Set a branch to deploy
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js 14.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: 14.x
-    # Install dependencies
-    - name: Install dependencies
-      run: npm install
-    # Build the project
-    - name: Build
-      run: npm run build
-
-    # Deploy to surge
-    - name: Deploy
-      run: npm install --global surge && surge ./build meuportolio.surge.sh --token de56c2607cb7a4125de8d88064c63745
+  runMultipleCommands:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+      # Build the project
+      - name: Build
+        run: npm run build
+  
+      # Deploy to surge
+      - name: Deploy
+        run: npm install --global surge && surge ./build meuportolio.surge.sh --token de56c2607cb7a4125de8d88064c63745
